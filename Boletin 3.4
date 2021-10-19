@@ -1,0 +1,32 @@
+
+package boletin_3_4;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author dam1
+ */
+public class Boletin_3_4 {
+
+  
+    public static void main(String[] args)throws IOException {
+        BufferedReader br=new BufferedReader (new InputStreamReader(System.in));
+        System.out.println("Introduzca unha cantidade en euros: ");
+        int cantidadeTotal=Integer.parseInt(br.readLine());
+        int billetes100=cantidadeTotal/100;
+        int billetes20=(cantidadeTotal%100)/20;
+        int billetes5=((cantidadeTotal%100)%20)/5;
+        int monedas1=((cantidadeTotal%100)%20)%5;
+        System.out.println("Billetes de 100: "+billetes100+"\n"
+                + "Billetes de 20: "+billetes20+"\n"
+                        + "Billetes de 5: "+billetes5+"\n"
+                                + "Moedas de 1: "+monedas1);
+        
+        
+        
+    }
+    
+}
