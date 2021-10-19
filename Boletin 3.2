@@ -1,0 +1,29 @@
+
+package boletin_3_2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author dam1
+ */
+public class Boletin_3_2 {
+
+    /**
+     * @param args the command line arguments
+     * @throws java.io.IOException
+     */
+    public static void main(String[] args)throws IOException {
+       BufferedReader br=new BufferedReader (new InputStreamReader(System.in));
+        System.out.println("Introduzca os grados centígrados que desexa convertir: ");
+        float gradosC=Float.parseFloat(br.readLine());
+       float kelvin=gradosC+273f;
+       float farenheint=gradosC*1.8f+32f;
+       
+        System.out.println("Os grados centígrados en kelvin son: "+kelvin+"\n"
+                + "Os grados centígrados en Farenheint son: "+farenheint);
+    }
+    
+}
