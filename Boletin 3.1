@@ -1,0 +1,29 @@
+
+package boletin_3_1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author dam1
+ */
+public class Boletin_3_1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Introduzca o precio orixinal do producto: ");
+        float tarifa = Float.parseFloat(br.readLine());
+        System.out.println("Introduzca o precio final do producto: ");
+        float precioFinal = Float.parseFloat(br.readLine());
+        float desconto = 100 - (precioFinal * 100 / tarifa);
+        System.out.println(desconto);
+
+    }
+   
+
+}
